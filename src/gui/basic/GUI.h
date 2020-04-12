@@ -220,8 +220,9 @@ public:
                bool bDisabled,
                bool bActive = false);
   void putRect(int x, int y, int nWidth, int nHeight, Color c);
-  void putPolygon(const std::vector<Vector2f> &points, Color c);
-  void putPolygon(const std::vector<Vector2f> &points, Vector2f shift, Color c);
+  void putPolygon(std::vector<Vector2f> points, Color c);
+  void putPolygon(std::vector<Vector2f> points, Vector2f shift, Color c);
+  void putLine(int x, int y, int nWidth, int nHeight, Color c);
   void setScissor(int x, int y, int nWidth, int nHeight);
   void getScissor(int *px, int *py, int *pnWidth, int *pnHeight);
 

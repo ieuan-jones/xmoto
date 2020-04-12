@@ -211,6 +211,7 @@ set(states_src
   states/StateHelp.cpp states/StateHelp.h
   states/StateLevelInfoViewer.cpp states/StateLevelInfoViewer.h
   states/StateLevelPackViewer.cpp states/StateLevelPackViewer.h
+  states/StateLevelPackSideView.cpp states/StateLevelPackSideView.h
   states/StateMainMenu.cpp states/StateMainMenu.h
   states/StateManager.cpp states/StateManager.h
   states/StateMenu.cpp states/StateMenu.h

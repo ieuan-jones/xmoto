@@ -260,7 +260,7 @@ void DrawLib::drawPolygon(const std::vector<Vector2f> &Points,
   if (GET_ALPHA(PolyColor) > 0) {
     startDraw(DRAW_MODE_POLYGON);
     setColor(PolyColor);
-    for( const Vector2f &vertex : Points) {
+    for( Vector2f vertex : Points) {
         glVertexSP(vertex.x, vertex.y);
     }
     endDraw();

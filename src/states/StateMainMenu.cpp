@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "StateEditProfile.h"
 #include "StateHelp.h"
 #include "StateLevelInfoViewer.h"
-#include "StateLevelPackViewer.h"
+#include "StateLevelPackSideView.h"
 #include "StateMessageBox.h"
 #include "StateOptions.h"
 #include "StatePreplayingGame.h"
@@ -634,7 +634,7 @@ void StateMainMenu::checkEventsLevelsPackTab() {
     LevelsPack *nSelectedPack = v_packTree->getSelectedPack();
     if (nSelectedPack != NULL) {
       StateManager::instance()->pushState(
-        new StateLevelPackViewer(nSelectedPack));
+        new StateLevelPackSideView(nSelectedPack));
     }
   }
 }

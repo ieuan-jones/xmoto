@@ -820,17 +820,17 @@ void UIWindow::putRect(int x, int y, int nWidth, int nHeight, Color c) {
     0);
 }
 
-void UIWindow::putPolygon(const std::vector<Vector2f> &points, Color c) {
+void UIWindow::putPolygon(std::vector<Vector2f> points, Color c) {
   putPolygon(
     points,
     Vector2f(0,0),
     c);
 }
 
-void UIWindow::putPolygon(const std::vector<Vector2f> &points, Vector2f shift, Color c) {
+void UIWindow::putPolygon(std::vector<Vector2f> points, Vector2f shift, Color c) {
   std::vector<Vector2f> shifted_points;
 
-  for(const Vector2f &point : points) {
+  for(Vector2f point : points) {
     shifted_points.push_back(Vector2f(point.x + shift.x + getAbsPosX(), point.y + shift.y + getAbsPosY()));
   }
 

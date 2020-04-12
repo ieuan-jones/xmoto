@@ -71,7 +71,7 @@ void UIEdit::paint(void) {
   if (bDisabled) {
     putText(4, getPosition().nHeight / 2, v_textToDisplay, 0.0, -0.5);
   }
-  if (isUglyMode() == false) {
+  /*if (isUglyMode() == false) {
     putElem(0, 0, -1, -1, UI_ELEM_FRAME_TL, false);
     putElem(getPosition().nWidth - 8, 0, -1, -1, UI_ELEM_FRAME_TR, false);
     putElem(getPosition().nWidth - 8,
@@ -106,7 +106,26 @@ void UIEdit::paint(void) {
             getPosition().nWidth,
             getPosition().nHeight,
             MAKE_COLOR(0, 0, 0, 127));
-  }
+  }*/
+
+  std::vector<Vector2f> points = {
+    Vector2f(8, 0),
+    Vector2f(16, 0),
+    Vector2f(8, getPosition().nHeight),
+    Vector2f(0, getPosition().nHeight)
+  };
+
+  putPolygon(points, MAKE_COLOR(255, 255, 255, 255));
+  putPolygon(points, Vector2f(24, 0), MAKE_COLOR(255, 255, 255, 255));
+
+  points = {
+    Vector2f(32, 0),
+    Vector2f(32, getPosition().nHeight),
+    Vector2f(getPosition().nWidth, getPosition().nHeight),
+    Vector2f(getPosition().nWidth, 0)
+  };
+
+  putPolygon(points, MAKE_COLOR(0, 0, 0, 168));
 
   if (!bDisabled) {
     if (bActive) {
